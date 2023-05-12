@@ -17,12 +17,10 @@ import gradio as gr
 
 df = pd.read_csv('train_full.csv')
 df = shuffle(df).reset_index()
-df
 
 for i in range(len(df)):
   df['text'][i] = df['text'][i].lower()
 
-df
 
 vectorizer = TfidfVectorizer()
 train_len = (len(df) - 1) - (int((len(df) - 1) * 0.2))
@@ -32,7 +30,6 @@ y_train = df['target'][:train_len].values
 y_test = df['target'][train_len+1:].values
 
 print(len(y_train), len(y_test))
-X_train
 
 """## Model"""
 
