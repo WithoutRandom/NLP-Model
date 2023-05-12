@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/gist/WithoutRandom/25b101b2b828a09bf4cfe5debb777f64/nlp-model.ipynb
 """
 
-!pip install gradio
 
 import pandas as pd
 from sklearn.utils import shuffle
@@ -60,8 +59,3 @@ with gr.Blocks() as demo:
     send_btn.click(fn=predict, inputs=name, outputs=output, api_name="Send")
 
 demo.launch(share=True, debug=True)
-
-!git init
-!git remote add origin https://github.com/WithoutRandom/NPL-Model.git
-!git branch -M main
-!git push -u origin main
